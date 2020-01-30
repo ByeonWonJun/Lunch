@@ -40,7 +40,7 @@ while True:
         elif breakfast in ['n','N']:
             lunch = Lunch.not_ate_breakfast()
             print(lunch)
-            print("점심 메뉴로 정하시겠습니까?")
+            print("점심 메뉴로 정하시겠습니까?(Y/N)")
             try:
                 menu = input()
                 if menu in ['y','Y']:

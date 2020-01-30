@@ -17,12 +17,14 @@ def get_yesterday():
 
 #데이터베이스에 추가
 def set_date(object):
-    Acurs.execute("insert into AteLunch values(?,?)",(datetime.date.today(),object))
+    Acurs.execute("INSERT into AteLunch values(?,?)",(get_date(),object))
+    Adb.commit()
 
 #데이터베이스에 오늘 날짜 레코드 삭제
 def delete_food():
-    Acurs.execute("delete from AteLunch where day_ = '{}'".format(get_date()))
-    
+    Acurs.execute("DELETE from AteLunch where day_ = '{}'".format(get_date()))
+    Adb.commit()
+
 #전체 조회
 def serch_all():
     Acurs.execute("select * from AteLunch")
