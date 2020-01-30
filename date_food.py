@@ -22,10 +22,6 @@ def set_date(object):
 #데이터베이스에 오늘 날짜 레코드 삭제
 def delete_food():
     Acurs.execute("delete from AteLunch where day_ = '{}'".format(get_date()))
-
-#어제 날짜 음식 가져오기
-def serch_yesterday():
-    Acurs.execute("select food_ from AteLunch where day_ ='{}'".format(get_yesterday()))
     
 #전체 조회
 def serch_all():

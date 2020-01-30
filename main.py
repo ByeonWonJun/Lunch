@@ -9,9 +9,8 @@ while True:
     ---------------------------
           1  점심 등록
           2  오늘 점심 삭제
-          3  어제 점심 조회
-          4  총 점심 조회
-          5  종료
+          3  총 점심 조회
+          4  종료
     ---------------------------""")
 
     num = input()
@@ -62,12 +61,9 @@ while True:
         print("오늘의 메뉴가 삭제 되었습니다.")
     
     if num == '3':
-        date_food.serch_yesterday()
-
-    if num == '4':
         date_food.serch_all()
     
-    if num == '5':
+    if num == '4':
         date_food.close_db()
         break
 
